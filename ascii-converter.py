@@ -87,7 +87,7 @@ def realtime_ascii():
         
         cv2.imshow('window', frame)
         cv2.imwrite(name, frame)
-        converted_frame = img_to_ascii(name, 180, 28, 1.5)
+        converted_frame = img_to_ascii(name, 180,0, 1.5)
         #Realtime Camera feed -> ASCII
         print(converted_frame)
      

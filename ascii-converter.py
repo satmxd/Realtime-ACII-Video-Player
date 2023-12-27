@@ -8,6 +8,11 @@ ipath = dir+"chad.png"
 vpath = dir+"<Video>.mp4"
 vspath = dir+"cache\\"
 
+try:
+    os.mkdir(vspath)
+except OSError as error:
+    print(error)
+
 
 
 def clamp(n, min, max): 

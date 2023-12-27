@@ -4,7 +4,7 @@ import time
 import os
 
 dir = os.getcwd()
-ipath = dir+"chad.png"
+ipath = dir+"<Image>.png"
 vpath = dir+"<Video>.mp4"
 vspath = dir+"cache\\"
 

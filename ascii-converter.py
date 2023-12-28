@@ -15,7 +15,7 @@ except OSError as error:
     print(error)
 
 
-def img_to_ascii(img, baselength,  bias, contrast, high_detail = False):
+def img_to_ascii(img, baselength,  bias, contrast = 1.3, high_detail = False):
     
     #Processing
     img = ImageEnhance.Contrast(Image.open(img)).enhance(contrast).convert('L')

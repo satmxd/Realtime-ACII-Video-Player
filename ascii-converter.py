@@ -9,7 +9,8 @@ vpath = dir+"<Video>.mp4"
 vspath = dir+"cache\\"
 
 try:
-    os.mkdir(vspath)
+    if not os.path.exists(vspath):
+        os.mkdir(vspath)
 except OSError as error:
     print(error)
 

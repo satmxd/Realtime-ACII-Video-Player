@@ -14,7 +14,7 @@ try:
 except OSError as error:
     print(error)
 
-
+#TODO-change it to terminal based printing with dynamic size
 def img_to_ascii(img, baselength,  bias, contrast = 1.3, high_detail = False):
     
     #Processing
@@ -51,6 +51,7 @@ def video_to_ascii(vidpath, loop = True):
             name = dir + 'cache\\cacheframe.jpg'
             
             cv2.imwrite(name, frame)
+            fps = vid.get(cv2.CAP_PROP_FPS)
             converted_frame = img_to_ascii(name, 75, 4, 1.5)
             print(converted_frame)
 
@@ -58,7 +59,7 @@ def video_to_ascii(vidpath, loop = True):
             time.sleep(0.03)
         except:
             if loop:
-                video_to_ascii(vidpath)
+                video_to_ascii(1/fps)
             else:
                 break
      
@@ -74,12 +75,14 @@ def realtime_ascii():
             break
         
         name = dir + 'cache\\cacheframe.jpg'
+        fps = vid.get(cv2.CAP_PROP_FPS)
         
         cv2.imshow('window', frame)
         cv2.imwrite(name, frame)
         converted_frame = img_to_ascii(name, 180,0, 1.2)
         #Realtime Camera feed -> ASCII
         print(converted_frame)
+        time.sleep(1/fps)
      
     vid.release() 
     cv2.destroyAllWindows() 

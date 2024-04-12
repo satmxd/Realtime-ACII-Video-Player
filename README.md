@@ -1,8 +1,8 @@
 
 # Realtime-ACII-Converter
-Converts Camera feed or video/photo to ASCII characters and prints it in realtime.
+Converts Camera feed or video/photo to ASCII characters and displays it in realtime in the terminal.
 
-*Note: IDLE Text size must be set to ~8 and  fullscreen for viewing text.*
+*Run ascii-converter.py in the console to use it.*
 
 
 
